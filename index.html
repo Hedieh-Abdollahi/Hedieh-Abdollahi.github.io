@@ -7,6 +7,7 @@
     <title>Hedieh Abdollahi | Astronomer</title>
 
     <style>
+
         /* =========================
            GENERAL
         ========================= */
@@ -19,19 +20,18 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #0a0a0a;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+
+            background: #070707;
             color: #eeeeee;
+
             line-height: 1.7;
         }
 
         a {
-            color: #8ab4f8;
+            color: inherit;
             text-decoration: none;
-        }
-
-        a:hover {
-            color: #ffffff;
         }
 
 
@@ -42,36 +42,45 @@
         nav {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
-            background-color: rgba(10, 10, 10, 0.95);
-            border-bottom: 1px solid #252525;
+
+            background: rgba(7, 7, 7, 0.92);
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid #222222;
+
             z-index: 1000;
         }
 
         .nav-container {
-            max-width: 1100px;
+            max-width: 1150px;
             margin: auto;
+
             padding: 18px 30px;
+
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
         }
 
         .nav-name {
-            font-size: 20px;
-            font-weight: bold;
+            font-size: 18px;
+            font-weight: 600;
             color: #ffffff;
         }
 
         .nav-links {
+            list-style: none;
+
             display: flex;
             gap: 28px;
-            list-style: none;
         }
 
         .nav-links a {
-            color: #cccccc;
-            font-size: 15px;
+            font-size: 14px;
+            color: #aaaaaa;
+
             transition: 0.3s;
         }
 
@@ -81,67 +90,142 @@
 
 
         /* =========================
-           HERO SECTION
+           HERO
         ========================= */
 
         .hero {
+            position: relative;
+
             min-height: 100vh;
-            max-width: 1100px;
+
+            max-width: 1150px;
             margin: auto;
-            padding: 140px 30px 80px;
+
+            padding: 150px 30px 100px;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 70px;
+
+            gap: 80px;
+
+            overflow: hidden;
         }
 
+
+        /* Subtle stars */
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 2px;
+            height: 2px;
+
+            background: #ffffff;
+
+            top: 15%;
+            left: 15%;
+
+            box-shadow:
+                120px 80px #ffffff,
+                300px 30px #ffffff,
+                520px 150px #ffffff,
+                700px 50px #ffffff,
+                850px 220px #ffffff,
+                1000px 80px #ffffff,
+                400px 300px #ffffff,
+                150px 400px #ffffff;
+
+            opacity: 0.35;
+        }
+
+
         .hero-text {
-            flex: 1;
+            position: relative;
+            z-index: 2;
+
+            max-width: 700px;
         }
 
         .hero-text h1 {
-            font-size: 58px;
-            line-height: 1.2;
-            margin-bottom: 15px;
+            font-size: clamp(42px, 6vw, 72px);
+
+            line-height: 1.1;
+
+            font-weight: 600;
+
+            letter-spacing: -2px;
+
             color: #ffffff;
+
+            margin-bottom: 18px;
         }
 
         .hero-text h2 {
-            font-size: 25px;
-            font-weight: normal;
-            color: #aaaaaa;
-            margin-bottom: 25px;
+            font-size: 24px;
+
+            font-weight: 400;
+
+            color: #999999;
+
+            margin-bottom: 28px;
         }
 
         .hero-text p {
-            max-width: 650px;
             font-size: 18px;
-            color: #cccccc;
-            margin-bottom: 30px;
+
+            color: #c5c5c5;
+
+            max-width: 650px;
+
+            margin-bottom: 35px;
         }
 
 
         /* =========================
-           PHOTO PLACEHOLDER
+           PHOTO
         ========================= */
 
         .photo-placeholder {
-            width: 280px;
-            height: 350px;
 
-            border: 1px solid #444444;
-            background-color: #151515;
+            width: 300px;
+            height: 380px;
+
+            flex-shrink: 0;
+
+            position: relative;
+
+            background: #111111;
+
+            border: 1px solid #333333;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
-            color: #888888;
+            color: #777777;
+
             text-align: center;
+
             font-size: 15px;
 
-            flex-shrink: 0;
+            z-index: 2;
+        }
+
+        .photo-placeholder::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 12px;
+
+            border: 1px solid #222222;
+
+            pointer-events: none;
         }
 
 
@@ -150,21 +234,27 @@
         ========================= */
 
         .button {
+
             display: inline-block;
-            padding: 12px 25px;
 
-            border: 1px solid #8ab4f8;
-            border-radius: 4px;
+            padding: 12px 24px;
 
-            color: #8ab4f8;
-            font-size: 15px;
+            border: 1px solid #777777;
+
+            color: #eeeeee;
+
+            font-size: 14px;
 
             transition: 0.3s;
         }
 
         .button:hover {
-            background-color: #8ab4f8;
-            color: #0a0a0a;
+
+            background: #eeeeee;
+
+            color: #070707;
+
+            border-color: #eeeeee;
         }
 
 
@@ -173,60 +263,89 @@
         ========================= */
 
         section {
-            max-width: 1100px;
+
+            max-width: 1150px;
+
             margin: auto;
-            padding: 90px 30px;
+
+            padding: 100px 30px;
         }
 
         section h2 {
+
             font-size: 32px;
+
+            font-weight: 500;
+
             color: #ffffff;
+
             margin-bottom: 35px;
 
-            border-bottom: 1px solid #333333;
-            padding-bottom: 12px;
+            padding-bottom: 15px;
+
+            border-bottom: 1px solid #292929;
         }
 
         section p {
+
             max-width: 850px;
-            color: #cccccc;
+
             font-size: 17px;
+
+            color: #bdbdbd;
         }
 
 
         /* =========================
-           RESEARCH INTERESTS
+           RESEARCH
         ========================= */
 
         .research-grid {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 30px;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+
+            margin-top: 35px;
         }
 
         .research-card {
-            background-color: #151515;
-            border: 1px solid #292929;
-            padding: 25px;
+
+            padding: 30px;
+
+            background: #101010;
+
+            border: 1px solid #222222;
 
             transition: 0.3s;
         }
 
         .research-card:hover {
+
+            transform: translateY(-4px);
+
             border-color: #555555;
-            transform: translateY(-3px);
         }
 
         .research-card h3 {
-            color: #ffffff;
-            margin-bottom: 10px;
+
             font-size: 19px;
+
+            font-weight: 500;
+
+            color: #ffffff;
+
+            margin-bottom: 12px;
         }
 
         .research-card p {
+
             font-size: 15px;
-            color: #aaaaaa;
+
+            color: #999999;
         }
 
 
@@ -235,30 +354,62 @@
         ========================= */
 
         .affiliation {
-            margin-bottom: 25px;
+
+            padding: 22px 0;
+
+            border-bottom: 1px solid #222222;
         }
 
         .affiliation h3 {
+
+            font-size: 18px;
+
+            font-weight: 500;
+
             color: #ffffff;
-            font-size: 19px;
+
             margin-bottom: 5px;
         }
 
         .affiliation p {
-            color: #aaaaaa;
+
             font-size: 16px;
+
+            color: #999999;
         }
 
 
         /* =========================
-           CONTACT
+           LINKS
         ========================= */
 
         .contact-links {
-            margin-top: 25px;
+
             display: flex;
-            gap: 25px;
+
             flex-wrap: wrap;
+
+            gap: 25px;
+
+            margin-top: 25px;
+        }
+
+        .contact-links a {
+
+            color: #aaaaaa;
+
+            border-bottom: 1px solid #555555;
+
+            padding-bottom: 3px;
+
+            transition: 0.3s;
+        }
+
+        .contact-links a:hover {
+
+            color: #ffffff;
+
+            border-color: #ffffff;
         }
 
 
@@ -267,11 +418,16 @@
         ========================= */
 
         footer {
-            border-top: 1px solid #252525;
+
+            border-top: 1px solid #222222;
+
             text-align: center;
+
             padding: 30px;
-            color: #777777;
-            font-size: 14px;
+
+            color: #666666;
+
+            font-size: 13px;
         }
 
 
@@ -279,41 +435,50 @@
            MOBILE
         ========================= */
 
-        @media (max-width: 800px) {
+        @media (max-width: 850px) {
 
             .nav-container {
+
                 flex-direction: column;
+
                 gap: 12px;
             }
 
             .nav-links {
+
                 gap: 15px;
+
                 flex-wrap: wrap;
+
                 justify-content: center;
             }
 
             .hero {
+
                 flex-direction: column-reverse;
+
                 text-align: center;
-                padding-top: 170px;
+
+                padding-top: 180px;
             }
 
             .hero-text p {
+
                 margin-left: auto;
+
                 margin-right: auto;
             }
 
-            .hero-text h1 {
-                font-size: 42px;
+            .photo-placeholder {
+
+                width: 240px;
+
+                height: 300px;
             }
 
             .research-grid {
-                grid-template-columns: 1fr;
-            }
 
-            .photo-placeholder {
-                width: 230px;
-                height: 290px;
+                grid-template-columns: 1fr;
             }
         }
 
@@ -324,291 +489,381 @@
 <body>
 
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-    <nav>
-        <div class="nav-container">
+<nav>
 
-            <div class="nav-name">
-                Hedieh Abdollahi
-            </div>
+    <div class="nav-container">
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#affiliations">Affiliations</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-        </div>
-    </nav>
-
-
-
-    <!-- =========================
-         HOME
-    ========================== -->
-
-    <header class="hero" id="home">
-
-        <div class="hero-text">
-
-            <h1>Hedieh Abdollahi</h1>
-
-            <h2>Astronomer</h2>
-
-            <p>
-                I study variable stars and stellar populations, with a focus
-                on long-period variables, AGB stars, dust and mass loss,
-                and the evolution of Local Group dwarf galaxies.
-            </p>
-
-            <a href="#research" class="button">
-                Explore My Research
-            </a>
-
+        <div class="nav-name">
+            Hedieh Abdollahi
         </div>
 
+        <ul class="nav-links">
 
-        <!-- Replace this box with your photo later -->
+            <li>
+                <a href="#home">Home</a>
+            </li>
 
-        <div class="photo-placeholder">
-            Your Photo<br>
-            (Upload Later)
-        </div>
+            <li>
+                <a href="#about">About</a>
+            </li>
 
-    </header>
+            <li>
+                <a href="#research">Research</a>
+            </li>
+
+            <li>
+                <a href="#affiliations">Affiliations</a>
+            </li>
+
+            <li>
+                <a href="#publications">Publications</a>
+            </li>
+
+            <li>
+                <a href="#cv">CV</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
 
 
 
-    <!-- =========================
-         ABOUT
-    ========================== -->
+<!-- =========================
+     HOME
+========================= -->
 
-    <section id="about">
+<header class="hero" id="home">
 
-        <h2>About Me</h2>
+
+    <div class="hero-text">
+
+        <h1>
+            Hedieh Abdollahi
+        </h1>
+
+        <h2>
+            Astronomer
+        </h2>
 
         <p>
-            I am an astronomer interested in understanding stellar evolution
-            and the evolution of nearby galaxies through the study of variable
-            stars and stellar populations.
+            I study variable stars and stellar populations, with a focus
+            on long-period variables, AGB stars, dust and mass loss,
+            and the evolution of Local Group dwarf galaxies.
         </p>
 
-        <br>
-
-        <p>
-            My research combines observations across different wavelengths
-            with photometric analysis, time-series data, stellar population
-            studies, and spectral energy distribution modelling.
-        </p>
-
-    </section>
-
-
-
-    <!-- =========================
-         RESEARCH
-    ========================== -->
-
-    <section id="research">
-
-        <h2>Research</h2>
-
-        <div class="research-grid">
-
-            <div class="research-card">
-                <h3>Variable Stars</h3>
-                <p>
-                    Studying stellar variability and using variable stars
-                    as probes of stellar evolution and stellar populations.
-                </p>
-            </div>
-
-
-            <div class="research-card">
-                <h3>AGB Stars & LPVs</h3>
-                <p>
-                    Investigating long-period variables and asymptotic giant
-                    branch stars, including their evolution and mass loss.
-                </p>
-            </div>
-
-
-            <div class="research-card">
-                <h3>Dust & Mass Loss</h3>
-                <p>
-                    Exploring circumstellar dust, mass-loss processes,
-                    and the environments around evolved stars.
-                </p>
-            </div>
-
-
-            <div class="research-card">
-                <h3>SED Modelling</h3>
-                <p>
-                    Using multi-wavelength photometry and spectral energy
-                    distributions to study the physical properties of stars.
-                </p>
-            </div>
-
-
-            <div class="research-card">
-                <h3>Dwarf Galaxies</h3>
-                <p>
-                    Studying the evolution of Local Group dwarf galaxies
-                    and their stellar populations.
-                </p>
-            </div>
-
-
-            <div class="research-card">
-                <h3>Star Formation Histories</h3>
-                <p>
-                    Reconstructing the star formation histories of nearby
-                    galaxies using evolved stellar populations and variable stars.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         AFFILIATIONS
-    ========================== -->
-
-    <section id="affiliations">
-
-        <h2>Affiliations</h2>
-
-        <div class="affiliation">
-
-            <h3>Affiliated Researcher</h3>
-
-            <p>
-                Konkoly Observatory, HUN-REN CSFK, Budapest, Hungary
-            </p>
-
-        </div>
-
-
-        <div class="affiliation">
-
-            <h3>Visiting Research Fellow</h3>
-
-            <p>
-                Institute for Research in Fundamental Sciences (IPM),
-                Tehran, Iran
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         PUBLICATIONS
-    ========================== -->
-
-    <section id="publications">
-
-        <h2>Publications</h2>
-
-        <p>
-            My publications and research outputs can be found through
-            my academic profiles.
-        </p>
-
-        <br>
-
-        <a href="#" class="button">
-            Publications
+        <a href="#research" class="button">
+            Explore My Research
         </a>
 
-    </section>
+    </div>
+
+
+    <!-- PHOTO PLACEHOLDER -->
+
+    <div class="photo-placeholder">
+
+        <div>
+            Your Photo
+            <br>
+            <br>
+            Upload Later
+        </div>
+
+    </div>
+
+
+</header>
 
 
 
-    <!-- =========================
-         CV
-    ========================== -->
+<!-- =========================
+     ABOUT
+========================= -->
 
-    <section id="cv">
+<section id="about">
 
-        <h2>Curriculum Vitae</h2>
+    <h2>
+        About Me
+    </h2>
 
-        <p>
-            You can download my curriculum vitae to learn more about
-            my academic background, research experience, publications,
-            and professional activities.
-        </p>
+    <p>
+        I am an astronomer interested in understanding stellar evolution
+        and the evolution of nearby galaxies through the study of variable
+        stars and stellar populations.
+    </p>
 
-        <br>
+    <br>
 
-        <a href="#" class="button">
-            Download CV
-        </a>
+    <p>
+        My research combines observations across different wavelengths
+        with photometric analysis, time-series data, stellar population
+        studies, and spectral energy distribution modelling.
+    </p>
 
-    </section>
-
-
-
-    <!-- =========================
-         CONTACT
-    ========================== -->
-
-    <section id="contact">
-
-        <h2>Contact</h2>
-
-        <p>
-            I am always happy to discuss research, collaborations,
-            and scientific opportunities.
-        </p>
+</section>
 
 
-        <div class="contact-links">
 
-            <a href="mailto:your-email@example.com">
-                Email
-            </a>
+<!-- =========================
+     RESEARCH
+========================= -->
 
-            <a href="#">
-                Google Scholar
-            </a>
+<section id="research">
 
-            <a href="#">
-                ORCID
-            </a>
+    <h2>
+        Research
+    </h2>
 
-            <a href="#">
-                GitHub
-            </a>
+
+    <div class="research-grid">
+
+
+        <div class="research-card">
+
+            <h3>
+                Variable Stars
+            </h3>
+
+            <p>
+                Studying stellar variability and using variable stars
+                as probes of stellar evolution and stellar populations.
+            </p>
 
         </div>
 
-    </section>
+
+        <div class="research-card">
+
+            <h3>
+                AGB Stars & LPVs
+            </h3>
+
+            <p>
+                Investigating long-period variables and asymptotic giant
+                branch stars, including their evolution and mass loss.
+            </p>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <h3>
+                Dust & Mass Loss
+            </h3>
+
+            <p>
+                Exploring circumstellar dust, mass-loss processes,
+                and the environments around evolved stars.
+            </p>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <h3>
+                SED Modelling
+            </h3>
+
+            <p>
+                Using multi-wavelength photometry and spectral energy
+                distributions to study the physical properties of stars.
+            </p>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <h3>
+                Dwarf Galaxies
+            </h3>
+
+            <p>
+                Studying the evolution of Local Group dwarf galaxies
+                and their stellar populations.
+            </p>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <h3>
+                Star Formation Histories
+            </h3>
+
+            <p>
+                Reconstructing the star formation histories of nearby
+                galaxies using evolved stellar populations and variable stars.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
 
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+<!-- =========================
+     AFFILIATIONS
+========================= -->
 
-    <footer>
+<section id="affiliations">
 
-        © 2026 Hedieh Abdollahi
+    <h2>
+        Affiliations
+    </h2>
 
-    </footer>
+
+    <div class="affiliation">
+
+        <h3>
+            Affiliated Researcher
+        </h3>
+
+        <p>
+            Konkoly Observatory, HUN-REN CSFK
+            <br>
+            Budapest, Hungary
+        </p>
+
+    </div>
+
+
+    <div class="affiliation">
+
+        <h3>
+            Visiting Research Fellow
+        </h3>
+
+        <p>
+            Institute for Research in Fundamental Sciences (IPM)
+            <br>
+            Tehran, Iran
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     PUBLICATIONS
+========================= -->
+
+<section id="publications">
+
+    <h2>
+        Publications
+    </h2>
+
+    <p>
+        My research publications and scientific contributions
+        are available through my academic profiles.
+    </p>
+
+    <br>
+
+    <a href="#" class="button">
+        View Publications
+    </a>
+
+</section>
+
+
+
+<!-- =========================
+     CV
+========================= -->
+
+<section id="cv">
+
+    <h2>
+        Curriculum Vitae
+    </h2>
+
+    <p>
+        Download my curriculum vitae for an overview of my
+        research experience, education, publications, and
+        professional activities.
+    </p>
+
+    <br>
+
+    <a href="#" class="button">
+        Download CV
+    </a>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+    <h2>
+        Contact
+    </h2>
+
+    <p>
+        I am happy to discuss research collaborations,
+        scientific projects, and professional opportunities.
+    </p>
+
+
+    <div class="contact-links">
+
+        <a href="mailto:your-email@example.com">
+            Email
+        </a>
+
+        <a href="#">
+            Google Scholar
+        </a>
+
+        <a href="#">
+            ORCID
+        </a>
+
+        <a href="#">
+            GitHub
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 Hedieh Abdollahi
+
+</footer>
 
 
 </body>
