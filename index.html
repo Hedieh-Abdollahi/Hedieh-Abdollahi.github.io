@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hedieh Abdollahi | Astronomer</title>
 
+    <meta name="description"
+          content="Hedieh Abdollahi — Astronomer working on variable stars, AGB stars, long-period variables, stellar populations, dust and mass loss, and Local Group dwarf galaxies.">
+
     <style>
 
-        /* =========================
-           GENERAL
-        ========================= */
+        /* =====================================
+           RESET
+        ===================================== */
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
             scroll-behavior: smooth;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         Roboto, Helvetica, Arial, sans-serif;
+            background: #0b0b0b;
+            color: #e8e5df;
 
-            background: #070707;
-            color: #eeeeee;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Helvetica Neue",
+                Helvetica,
+                Arial,
+                sans-serif;
 
             line-height: 1.7;
         }
@@ -35,353 +48,571 @@
         }
 
 
-        /* =========================
+        /* =====================================
            NAVIGATION
-        ========================= */
+        ===================================== */
 
         nav {
+
             position: fixed;
+
             top: 0;
             left: 0;
+
             width: 100%;
 
-            background: rgba(7, 7, 7, 0.92);
-            backdrop-filter: blur(10px);
+            z-index: 100;
+
+            background: rgba(11, 11, 11, 0.94);
 
             border-bottom: 1px solid #222222;
 
-            z-index: 1000;
+            backdrop-filter: blur(10px);
         }
 
-        .nav-container {
-            max-width: 1150px;
+        .nav-inner {
+
+            max-width: 1200px;
+
             margin: auto;
 
-            padding: 18px 30px;
+            padding: 22px 50px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
         }
 
-        .nav-name {
-            font-size: 18px;
-            font-weight: 600;
-            color: #ffffff;
+        .nav-logo {
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 19px;
+
+            letter-spacing: 0.2px;
+
+            color: #f2efe9;
         }
 
-        .nav-links {
-            list-style: none;
+        .nav-menu {
 
             display: flex;
-            gap: 28px;
+
+            gap: 32px;
+
+            list-style: none;
         }
 
-        .nav-links a {
-            font-size: 14px;
-            color: #aaaaaa;
+        .nav-menu a {
 
-            transition: 0.3s;
+            font-size: 13px;
+
+            letter-spacing: 0.5px;
+
+            color: #96938e;
+
+            transition: color 0.25s ease;
         }
 
-        .nav-links a:hover {
-            color: #ffffff;
+        .nav-menu a:hover {
+
+            color: #f2efe9;
         }
 
 
-        /* =========================
+        /* =====================================
            HERO
-        ========================= */
+        ===================================== */
 
         .hero {
-            position: relative;
+
+            max-width: 1200px;
 
             min-height: 100vh;
 
-            max-width: 1150px;
             margin: auto;
 
-            padding: 150px 30px 100px;
+            padding:
+                150px
+                50px
+                100px;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.35fr)
+                minmax(280px, 0.65fr);
+
+            align-items: center;
+
+            gap: 90px;
+        }
+
+
+        /* LEFT SIDE */
+
+        .hero-content {
+
+            position: relative;
+
+            padding-left: 38px;
+        }
+
+
+        /* Vertical line */
+
+        .hero-content::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 5px;
+
+            width: 1px;
+
+            height: 210px;
+
+            background: #66615b;
+        }
+
+
+        .eyebrow {
+
+            font-size: 12px;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+
+            color: #8d8983;
+
+            margin-bottom: 24px;
+        }
+
+
+        .hero h1 {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(54px, 7vw, 92px);
+
+            font-weight: 400;
+
+            line-height: 0.98;
+
+            letter-spacing: -3px;
+
+            color: #f2efe9;
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 25px;
+
+            font-style: italic;
+
+            color: #aaa59e;
+
+            margin-bottom: 32px;
+        }
+
+
+        .hero-description {
+
+            max-width: 650px;
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+            color: #b7b3ad;
+
+            margin-bottom: 38px;
+        }
+
+
+        .hero-links {
 
             display: flex;
-            align-items: center;
-            justify-content: space-between;
 
-            gap: 80px;
+            align-items: center;
+
+            gap: 30px;
+        }
+
+
+        .primary-link {
+
+            padding-bottom: 6px;
+
+            border-bottom: 1px solid #aaa59e;
+
+            font-size: 14px;
+
+            color: #e8e5df;
+
+            transition: border-color 0.25s ease;
+        }
+
+        .primary-link:hover {
+
+            border-color: #ffffff;
+        }
+
+
+        .secondary-link {
+
+            font-size: 14px;
+
+            color: #77736e;
+
+            transition: color 0.25s ease;
+        }
+
+        .secondary-link:hover {
+
+            color: #e8e5df;
+        }
+
+
+        /* =====================================
+           PHOTO
+        ===================================== */
+
+        .hero-photo {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .photo-frame {
+
+            position: relative;
+
+            width: 100%;
+
+            max-width: 340px;
+
+            aspect-ratio: 4 / 5;
+
+            background: #151515;
 
             overflow: hidden;
         }
 
 
-        /* Subtle stars */
+        /* Decorative frame */
 
-        .hero::before {
+        .photo-frame::before {
+
             content: "";
 
             position: absolute;
 
-            width: 2px;
-            height: 2px;
+            top: -14px;
 
-            background: #ffffff;
+            left: -14px;
 
-            top: 15%;
-            left: 15%;
+            width: 100%;
 
-            box-shadow:
-                120px 80px #ffffff,
-                300px 30px #ffffff,
-                520px 150px #ffffff,
-                700px 50px #ffffff,
-                850px 220px #ffffff,
-                1000px 80px #ffffff,
-                400px 300px #ffffff,
-                150px 400px #ffffff;
+            height: 100%;
 
-            opacity: 0.35;
+            border: 1px solid #3b3936;
+
+            z-index: -1;
         }
 
-
-        .hero-text {
-            position: relative;
-            z-index: 2;
-
-            max-width: 700px;
-        }
-
-        .hero-text h1 {
-            font-size: clamp(42px, 6vw, 72px);
-
-            line-height: 1.1;
-
-            font-weight: 600;
-
-            letter-spacing: -2px;
-
-            color: #ffffff;
-
-            margin-bottom: 18px;
-        }
-
-        .hero-text h2 {
-            font-size: 24px;
-
-            font-weight: 400;
-
-            color: #999999;
-
-            margin-bottom: 28px;
-        }
-
-        .hero-text p {
-            font-size: 18px;
-
-            color: #c5c5c5;
-
-            max-width: 650px;
-
-            margin-bottom: 35px;
-        }
-
-
-        /* =========================
-           PHOTO
-        ========================= */
 
         .photo-placeholder {
 
-            width: 300px;
-            height: 380px;
+            width: 100%;
 
-            flex-shrink: 0;
-
-            position: relative;
-
-            background: #111111;
-
-            border: 1px solid #333333;
+            height: 100%;
 
             display: flex;
 
             align-items: center;
-            justify-content: center;
 
-            color: #777777;
+            justify-content: center;
 
             text-align: center;
 
-            font-size: 15px;
+            padding: 40px;
 
-            z-index: 2;
-        }
+            color: #696661;
 
-        .photo-placeholder::after {
-
-            content: "";
-
-            position: absolute;
-
-            inset: 12px;
-
-            border: 1px solid #222222;
-
-            pointer-events: none;
-        }
-
-
-        /* =========================
-           BUTTON
-        ========================= */
-
-        .button {
-
-            display: inline-block;
-
-            padding: 12px 24px;
-
-            border: 1px solid #777777;
-
-            color: #eeeeee;
-
-            font-size: 14px;
-
-            transition: 0.3s;
-        }
-
-        .button:hover {
-
-            background: #eeeeee;
-
-            color: #070707;
-
-            border-color: #eeeeee;
-        }
-
-
-        /* =========================
-           SECTIONS
-        ========================= */
-
-        section {
-
-            max-width: 1150px;
-
-            margin: auto;
-
-            padding: 100px 30px;
-        }
-
-        section h2 {
-
-            font-size: 32px;
-
-            font-weight: 500;
-
-            color: #ffffff;
-
-            margin-bottom: 35px;
-
-            padding-bottom: 15px;
-
-            border-bottom: 1px solid #292929;
-        }
-
-        section p {
-
-            max-width: 850px;
-
-            font-size: 17px;
-
-            color: #bdbdbd;
-        }
-
-
-        /* =========================
-           RESEARCH
-        ========================= */
-
-        .research-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 18px;
-
-            margin-top: 35px;
-        }
-
-        .research-card {
-
-            padding: 30px;
-
-            background: #101010;
-
-            border: 1px solid #222222;
-
-            transition: 0.3s;
-        }
-
-        .research-card:hover {
-
-            transform: translateY(-4px);
-
-            border-color: #555555;
-        }
-
-        .research-card h3 {
-
-            font-size: 19px;
-
-            font-weight: 500;
-
-            color: #ffffff;
-
-            margin-bottom: 12px;
-        }
-
-        .research-card p {
-
-            font-size: 15px;
-
-            color: #999999;
-        }
-
-
-        /* =========================
-           AFFILIATIONS
-        ========================= */
-
-        .affiliation {
-
-            padding: 22px 0;
-
-            border-bottom: 1px solid #222222;
-        }
-
-        .affiliation h3 {
-
-            font-size: 18px;
-
-            font-weight: 500;
-
-            color: #ffffff;
-
-            margin-bottom: 5px;
-        }
-
-        .affiliation p {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
             font-size: 16px;
 
-            color: #999999;
+            font-style: italic;
         }
 
 
-        /* =========================
-           LINKS
-        ========================= */
+        /* =====================================
+           GENERAL SECTION
+        ===================================== */
+
+        .section {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding:
+                120px
+                50px;
+        }
+
+
+        .section-header {
+
+            display: grid;
+
+            grid-template-columns: 220px 1fr;
+
+            gap: 60px;
+
+            margin-bottom: 70px;
+        }
+
+
+        .section-number {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 15px;
+
+            color: #706c66;
+
+            padding-top: 8px;
+        }
+
+
+        .section-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 48px;
+
+            font-weight: 400;
+
+            line-height: 1.1;
+
+            color: #eeeae4;
+        }
+
+
+        .section-content {
+
+            margin-left: 280px;
+
+            max-width: 760px;
+        }
+
+
+        .section-content p {
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+            color: #aaa6a0;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =====================================
+           RESEARCH
+        ===================================== */
+
+        .research-list {
+
+            border-top: 1px solid #292725;
+        }
+
+
+        .research-item {
+
+            display: grid;
+
+            grid-template-columns: 70px 250px 1fr;
+
+            gap: 30px;
+
+            padding: 30px 0;
+
+            border-bottom: 1px solid #292725;
+
+            align-items: start;
+        }
+
+
+        .research-number {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #68645f;
+
+            font-size: 15px;
+        }
+
+
+        .research-name {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 22px;
+
+            color: #e8e5df;
+        }
+
+
+        .research-description {
+
+            color: #918d87;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================
+           AFFILIATIONS
+        ===================================== */
+
+        .affiliation-list {
+
+            border-top: 1px solid #292725;
+        }
+
+
+        .affiliation {
+
+            padding: 30px 0;
+
+            border-bottom: 1px solid #292725;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 40px;
+        }
+
+
+        .affiliation-position {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 21px;
+
+            color: #e8e5df;
+        }
+
+
+        .affiliation-institution {
+
+            text-align: right;
+
+            color: #918d87;
+
+            font-size: 15px;
+        }
+
+
+        /* =====================================
+           PUBLICATIONS / CV
+        ===================================== */
+
+        .simple-block {
+
+            padding: 40px 0;
+
+            border-top: 1px solid #292725;
+
+            border-bottom: 1px solid #292725;
+        }
+
+
+        .simple-block p {
+
+            max-width: 700px;
+
+            color: #99958f;
+
+            font-size: 16px;
+
+            line-height: 1.9;
+
+            margin-bottom: 25px;
+        }
+
+
+        .text-link {
+
+            display: inline-block;
+
+            font-size: 14px;
+
+            color: #e8e5df;
+
+            padding-bottom: 5px;
+
+            border-bottom: 1px solid #77736e;
+        }
+
+
+        .text-link:hover {
+
+            border-color: #ffffff;
+        }
+
+
+        /* =====================================
+           CONTACT
+        ===================================== */
 
         .contact-links {
 
@@ -389,23 +620,27 @@
 
             flex-wrap: wrap;
 
-            gap: 25px;
+            gap: 30px;
 
-            margin-top: 25px;
+            margin-top: 30px;
         }
 
-        .contact-links a {
 
-            color: #aaaaaa;
+        .contact-link {
 
-            border-bottom: 1px solid #555555;
+            font-size: 15px;
 
-            padding-bottom: 3px;
+            color: #aaa6a0;
 
-            transition: 0.3s;
+            padding-bottom: 5px;
+
+            border-bottom: 1px solid #4a4743;
+
+            transition: all 0.25s ease;
         }
 
-        .contact-links a:hover {
+
+        .contact-link:hover {
 
             color: #ffffff;
 
@@ -413,99 +648,203 @@
         }
 
 
-        /* =========================
+        /* =====================================
            FOOTER
-        ========================= */
+        ===================================== */
 
         footer {
 
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding:
+                40px
+                50px
+                60px;
+
             border-top: 1px solid #222222;
 
-            text-align: center;
+            display: flex;
 
-            padding: 30px;
+            justify-content: space-between;
 
-            color: #666666;
+            color: #5f5c57;
 
-            font-size: 13px;
+            font-size: 12px;
         }
 
 
-        /* =========================
+        /* =====================================
            MOBILE
-        ========================= */
+        ===================================== */
 
-        @media (max-width: 850px) {
+        @media (max-width: 900px) {
 
-            .nav-container {
+            .nav-inner {
+
+                padding:
+                    18px
+                    25px;
+            }
+
+            .nav-menu {
+
+                gap: 16px;
+            }
+
+            .hero {
+
+                grid-template-columns: 1fr;
+
+                padding:
+                    140px
+                    30px
+                    80px;
+
+                gap: 70px;
+            }
+
+            .hero-photo {
+
+                order: -1;
+
+                justify-content: flex-start;
+
+                padding-left: 38px;
+            }
+
+            .photo-frame {
+
+                max-width: 260px;
+            }
+
+            .section {
+
+                padding:
+                    90px
+                    30px;
+            }
+
+            .section-header {
+
+                grid-template-columns: 1fr;
+
+                gap: 15px;
+
+                margin-bottom: 40px;
+            }
+
+            .section-content {
+
+                margin-left: 0;
+            }
+
+            .research-item {
+
+                grid-template-columns:
+                    50px
+                    1fr;
+            }
+
+            .research-description {
+
+                grid-column: 2;
+            }
+
+            .affiliation {
+
+                flex-direction: column;
+
+                gap: 10px;
+            }
+
+            .affiliation-institution {
+
+                text-align: left;
+            }
+
+            footer {
+
+                padding:
+                    30px;
+
+                flex-direction: column;
+
+                gap: 10px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .nav-inner {
+
+                align-items: flex-start;
 
                 flex-direction: column;
 
                 gap: 12px;
             }
 
-            .nav-links {
-
-                gap: 15px;
+            .nav-menu {
 
                 flex-wrap: wrap;
-
-                justify-content: center;
             }
 
-            .hero {
+            .hero h1 {
 
-                flex-direction: column-reverse;
+                font-size: 52px;
 
-                text-align: center;
-
-                padding-top: 180px;
+                letter-spacing: -2px;
             }
 
-            .hero-text p {
+            .hero-content {
 
-                margin-left: auto;
-
-                margin-right: auto;
+                padding-left: 25px;
             }
 
-            .photo-placeholder {
+            .hero-content::before {
 
-                width: 240px;
-
-                height: 300px;
+                height: 180px;
             }
 
-            .research-grid {
+            .hero-links {
 
-                grid-template-columns: 1fr;
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 18px;
+            }
+
+            .section-title {
+
+                font-size: 40px;
             }
         }
 
     </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
+<!-- =====================================
      NAVIGATION
-========================= -->
+===================================== -->
 
 <nav>
 
-    <div class="nav-container">
+    <div class="nav-inner">
 
-        <div class="nav-name">
+        <a href="#home" class="nav-logo">
             Hedieh Abdollahi
-        </div>
+        </a>
 
-        <ul class="nav-links">
-
-            <li>
-                <a href="#home">Home</a>
-            </li>
+        <ul class="nav-menu">
 
             <li>
                 <a href="#about">About</a>
@@ -513,10 +852,6 @@
 
             <li>
                 <a href="#research">Research</a>
-            </li>
-
-            <li>
-                <a href="#affiliations">Affiliations</a>
             </li>
 
             <li>
@@ -539,45 +874,70 @@
 
 
 
-<!-- =========================
-     HOME
-========================= -->
+<!-- =====================================
+     HERO
+===================================== -->
 
 <header class="hero" id="home">
 
 
-    <div class="hero-text">
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Astronomer
+        </div>
+
 
         <h1>
-            Hedieh Abdollahi
+            Hedieh<br>
+            Abdollahi
         </h1>
 
-        <h2>
-            Astronomer
-        </h2>
 
-        <p>
-            I study variable stars and stellar populations, with a focus
-            on long-period variables, AGB stars, dust and mass loss,
-            and the evolution of Local Group dwarf galaxies.
+        <div class="hero-title">
+            Variable stars · Stellar populations · Galaxy evolution
+        </div>
+
+
+        <p class="hero-description">
+
+            My research focuses on variable stars and evolved stellar
+            populations, with particular interests in long-period variables,
+            AGB stars, dust and mass loss, and the evolution of Local Group
+            dwarf galaxies.
+
         </p>
 
-        <a href="#research" class="button">
-            Explore My Research
-        </a>
+
+        <div class="hero-links">
+
+            <a href="#research" class="primary-link">
+                Explore my research →
+            </a>
+
+            <a href="#about" class="secondary-link">
+                About me
+            </a>
+
+        </div>
 
     </div>
 
 
-    <!-- PHOTO PLACEHOLDER -->
 
-    <div class="photo-placeholder">
+    <!-- PHOTO -->
 
-        <div>
-            Your Photo
-            <br>
-            <br>
-            Upload Later
+    <div class="hero-photo">
+
+        <div class="photo-frame">
+
+            <div class="photo-placeholder">
+
+                Your photograph<br>
+                will appear here
+
+            </div>
+
         </div>
 
     </div>
@@ -587,128 +947,196 @@
 
 
 
-<!-- =========================
+<!-- =====================================
      ABOUT
-========================= -->
+===================================== -->
 
-<section id="about">
+<section class="section" id="about">
 
-    <h2>
-        About Me
-    </h2>
 
-    <p>
-        I am an astronomer interested in understanding stellar evolution
-        and the evolution of nearby galaxies through the study of variable
-        stars and stellar populations.
-    </p>
+    <div class="section-header">
 
-    <br>
+        <div class="section-number">
+            01 / About
+        </div>
 
-    <p>
-        My research combines observations across different wavelengths
-        with photometric analysis, time-series data, stellar population
-        studies, and spectral energy distribution modelling.
-    </p>
+        <h2 class="section-title">
+            About me
+        </h2>
+
+    </div>
+
+
+    <div class="section-content">
+
+        <p>
+
+            I am an astronomer interested in understanding stellar evolution
+            and the evolution of nearby galaxies through the study of variable
+            stars and stellar populations.
+
+        </p>
+
+
+        <p>
+
+            My work combines time-domain observations, multi-wavelength
+            photometry, stellar population analysis, and spectral energy
+            distribution modelling to investigate the physical properties
+            and evolutionary histories of stars and galaxies.
+
+        </p>
+
+    </div>
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================
      RESEARCH
-========================= -->
+===================================== -->
 
-<section id="research">
-
-    <h2>
-        Research
-    </h2>
+<section class="section" id="research">
 
 
-    <div class="research-grid">
+    <div class="section-header">
+
+        <div class="section-number">
+            02 / Research
+        </div>
+
+        <h2 class="section-title">
+            Research interests
+        </h2>
+
+    </div>
 
 
-        <div class="research-card">
+    <div class="research-list">
 
-            <h3>
+
+        <div class="research-item">
+
+            <div class="research-number">
+                01
+            </div>
+
+            <div class="research-name">
                 Variable Stars
-            </h3>
+            </div>
 
-            <p>
-                Studying stellar variability and using variable stars
+            <div class="research-description">
+
+                Stellar variability and the use of variable stars
                 as probes of stellar evolution and stellar populations.
-            </p>
+
+            </div>
 
         </div>
 
 
-        <div class="research-card">
 
-            <h3>
+        <div class="research-item">
+
+            <div class="research-number">
+                02
+            </div>
+
+            <div class="research-name">
                 AGB Stars & LPVs
-            </h3>
+            </div>
 
-            <p>
-                Investigating long-period variables and asymptotic giant
-                branch stars, including their evolution and mass loss.
-            </p>
+            <div class="research-description">
+
+                Long-period variables and asymptotic giant branch stars,
+                including their evolution and mass-loss processes.
+
+            </div>
 
         </div>
 
 
-        <div class="research-card">
 
-            <h3>
+        <div class="research-item">
+
+            <div class="research-number">
+                03
+            </div>
+
+            <div class="research-name">
                 Dust & Mass Loss
-            </h3>
+            </div>
 
-            <p>
-                Exploring circumstellar dust, mass-loss processes,
-                and the environments around evolved stars.
-            </p>
+            <div class="research-description">
 
-        </div>
+                Circumstellar dust, stellar winds, and the physical
+                processes governing mass loss from evolved stars.
 
-
-        <div class="research-card">
-
-            <h3>
-                SED Modelling
-            </h3>
-
-            <p>
-                Using multi-wavelength photometry and spectral energy
-                distributions to study the physical properties of stars.
-            </p>
+            </div>
 
         </div>
 
 
-        <div class="research-card">
 
-            <h3>
+        <div class="research-item">
+
+            <div class="research-number">
+                04
+            </div>
+
+            <div class="research-name">
+                Stellar Populations
+            </div>
+
+            <div class="research-description">
+
+                The properties and evolution of stellar populations
+                using variable stars and multi-wavelength observations.
+
+            </div>
+
+        </div>
+
+
+
+        <div class="research-item">
+
+            <div class="research-number">
+                05
+            </div>
+
+            <div class="research-name">
                 Dwarf Galaxies
-            </h3>
+            </div>
 
-            <p>
-                Studying the evolution of Local Group dwarf galaxies
-                and their stellar populations.
-            </p>
+            <div class="research-description">
+
+                The evolution of Local Group dwarf galaxies and
+                their resolved stellar populations.
+
+            </div>
 
         </div>
 
 
-        <div class="research-card">
 
-            <h3>
+        <div class="research-item">
+
+            <div class="research-number">
+                06
+            </div>
+
+            <div class="research-name">
                 Star Formation Histories
-            </h3>
+            </div>
 
-            <p>
+            <div class="research-description">
+
                 Reconstructing the star formation histories of nearby
-                galaxies using evolved stellar populations and variable stars.
-            </p>
+                galaxies through evolved stellar populations.
+
+            </div>
 
         </div>
 
@@ -719,134 +1147,101 @@
 
 
 
-<!-- =========================
+<!-- =====================================
      AFFILIATIONS
-========================= -->
+===================================== -->
 
-<section id="affiliations">
-
-    <h2>
-        Affiliations
-    </h2>
+<section class="section" id="affiliations">
 
 
-    <div class="affiliation">
+    <div class="section-header">
 
-        <h3>
-            Affiliated Researcher
-        </h3>
+        <div class="section-number">
+            03 / Affiliations
+        </div>
 
-        <p>
-            Konkoly Observatory, HUN-REN CSFK
-            <br>
-            Budapest, Hungary
-        </p>
+        <h2 class="section-title">
+            Current affiliations
+        </h2>
 
     </div>
 
 
-    <div class="affiliation">
+    <div class="affiliation-list">
 
-        <h3>
-            Visiting Research Fellow
-        </h3>
 
-        <p>
-            Institute for Research in Fundamental Sciences (IPM)
-            <br>
-            Tehran, Iran
-        </p>
+        <div class="affiliation">
+
+            <div class="affiliation-position">
+                Affiliated Researcher
+            </div>
+
+            <div class="affiliation-institution">
+
+                Konkoly Observatory<br>
+                HUN-REN CSFK<br>
+                Budapest, Hungary
+
+            </div>
+
+        </div>
+
+
+
+        <div class="affiliation">
+
+            <div class="affiliation-position">
+                Visiting Research Fellow
+            </div>
+
+            <div class="affiliation-institution">
+
+                Institute for Research in Fundamental Sciences (IPM)<br>
+                Tehran, Iran
+
+            </div>
+
+        </div>
+
 
     </div>
-
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================
      PUBLICATIONS
-========================= -->
+===================================== -->
 
-<section id="publications">
-
-    <h2>
-        Publications
-    </h2>
-
-    <p>
-        My research publications and scientific contributions
-        are available through my academic profiles.
-    </p>
-
-    <br>
-
-    <a href="#" class="button">
-        View Publications
-    </a>
-
-</section>
+<section class="section" id="publications">
 
 
+    <div class="section-header">
 
-<!-- =========================
-     CV
-========================= -->
+        <div class="section-number">
+            04 / Publications
+        </div>
 
-<section id="cv">
+        <h2 class="section-title">
+            Publications
+        </h2>
 
-    <h2>
-        Curriculum Vitae
-    </h2>
-
-    <p>
-        Download my curriculum vitae for an overview of my
-        research experience, education, publications, and
-        professional activities.
-    </p>
-
-    <br>
-
-    <a href="#" class="button">
-        Download CV
-    </a>
-
-</section>
+    </div>
 
 
+    <div class="simple-block">
 
-<!-- =========================
-     CONTACT
-========================= -->
+        <p>
 
-<section id="contact">
+            A list of my scientific publications and research outputs
+            can be found through my academic profiles.
 
-    <h2>
-        Contact
-    </h2>
-
-    <p>
-        I am happy to discuss research collaborations,
-        scientific projects, and professional opportunities.
-    </p>
+        </p>
 
 
-    <div class="contact-links">
-
-        <a href="mailto:your-email@example.com">
-            Email
-        </a>
-
-        <a href="#">
-            Google Scholar
-        </a>
-
-        <a href="#">
-            ORCID
-        </a>
-
-        <a href="#">
-            GitHub
+        <a href="#" class="text-link">
+            View publications →
         </a>
 
     </div>
@@ -855,16 +1250,124 @@
 
 
 
-<!-- =========================
+<!-- =====================================
+     CV
+===================================== -->
+
+<section class="section" id="cv">
+
+
+    <div class="section-header">
+
+        <div class="section-number">
+            05 / Curriculum Vitae
+        </div>
+
+        <h2 class="section-title">
+            Curriculum vitae
+        </h2>
+
+    </div>
+
+
+    <div class="simple-block">
+
+        <p>
+
+            For an overview of my academic background, research experience,
+            publications, and professional activities, please see my
+            curriculum vitae.
+
+        </p>
+
+
+        <a href="#" class="text-link">
+            Download CV →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     CONTACT
+===================================== -->
+
+<section class="section" id="contact">
+
+
+    <div class="section-header">
+
+        <div class="section-number">
+            06 / Contact
+        </div>
+
+        <h2 class="section-title">
+            Get in touch
+        </h2>
+
+    </div>
+
+
+    <div class="section-content">
+
+        <p>
+
+            I am always happy to discuss research ideas,
+            collaborations, and scientific opportunities.
+
+        </p>
+
+
+        <div class="contact-links">
+
+            <a href="mailto:your-email@example.com"
+               class="contact-link">
+                Email
+            </a>
+
+            <a href="#"
+               class="contact-link">
+                Google Scholar
+            </a>
+
+            <a href="#"
+               class="contact-link">
+                ORCID
+            </a>
+
+            <a href="https://github.com/Hedieh-Abdollahi"
+               class="contact-link">
+                GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
      FOOTER
-========================= -->
+===================================== -->
 
 <footer>
 
-    © 2026 Hedieh Abdollahi
+    <div>
+        © 2026 Hedieh Abdollahi
+    </div>
+
+    <div>
+        Astronomer
+    </div>
 
 </footer>
 
 
 </body>
+
 </html>
