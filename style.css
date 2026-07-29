@@ -355,5 +355,11 @@ h1{
 font-size:3rem;
 
 }
+.mirror-icon{
+    transform: scaleX(-1);
+}
 
+@media(max-width:850px){
+
+    ...
 }
