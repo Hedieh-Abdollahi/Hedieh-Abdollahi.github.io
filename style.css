@@ -4,7 +4,7 @@
 ===================================================== */
 
 /* ---------- Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* ---------- Reset ---------- */
 *{
@@ -58,10 +58,10 @@ nav{
 .logo{
   text-decoration:none;
   color:#c4a35a;
-  font-family:'Cormorant Garamond',serif;
-  font-size:2.1rem;
+  font-family:'Inter',sans-serif;
+  font-size:1.5rem;
   font-weight:600;
-  letter-spacing:2px;
+  letter-spacing:1px;
 }
 nav ul{
   list-style:none;
@@ -124,11 +124,11 @@ nav ul li a.active{
   margin-bottom:12px;
 }
 h1{
-  font-family:'Cormorant Garamond',serif;
-  font-size:3.6rem;
-  line-height:1;
+  font-family:'Inter',sans-serif;
+  font-size:2.4rem;
+  line-height:1.15;
   font-weight:600;
-  margin-bottom:16px;
+  margin-bottom:14px;
 }
 .tagline{
   color:#c4a35a;
@@ -145,8 +145,8 @@ h1{
   margin-bottom:30px;
 }
 .contact-box h4{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.3rem;
+  font-family:'Inter',sans-serif;
+  font-size:1.05rem;
   color:#c4a35a;
   font-weight:600;
   margin-bottom:16px;
@@ -263,9 +263,9 @@ h1{
 }
 
 h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:2.8rem;
-  font-weight:500;
+  font-family:'Inter',sans-serif;
+  font-size:1.9rem;
+  font-weight:600;
   color:#ffffff;
   margin-bottom:30px;
   position:relative;
@@ -289,10 +289,10 @@ p{
   padding:30px 0;
 }
 .research-item h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.9rem;
+  font-family:'Inter',sans-serif;
+  font-size:1.3rem;
   color:#ffffff;
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 .research-item p{
   max-width:800px;
@@ -312,10 +312,10 @@ hr{
   padding:24px 0;
 }
 .publication h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.6rem;
+  font-family:'Inter',sans-serif;
+  font-size:1.15rem;
   color:#ffffff;
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 .publication p{
   color:#cfcfcf;
@@ -406,7 +406,7 @@ a{
     justify-content:center;
   }
   h1{
-    font-size:3rem;
+    font-size:2.1rem;
   }
 }
 
@@ -434,10 +434,10 @@ a{
     white-space:nowrap;
   }
   h1{
-    font-size:2.5rem;
+    font-size:1.9rem;
   }
   h2{
-    font-size:2.1rem;
+    font-size:1.6rem;
   }
   .tagline{
     font-size:.92rem;
