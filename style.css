@@ -4,7 +4,7 @@
 ===================================================== */
 
 /* ---------- Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 /* ---------- Reset ---------- */
 *{
@@ -18,7 +18,7 @@ html{
 body{
   background:#111315;
   color:#f5f5f5;
-  font-family:'Inter',sans-serif;
+  font-family:'Outfit',sans-serif;
   line-height:1.8;
   font-size:17px;
 }
@@ -61,7 +61,7 @@ nav{
   -webkit-background-clip:text;
   background-clip:text;
   color:transparent;
-  font-family:'Inter',sans-serif;
+  font-family:'Outfit',sans-serif;
   font-size:1.5rem;
   font-weight:600;
   letter-spacing:1px;
@@ -127,7 +127,7 @@ nav ul li a.active{
   margin-bottom:12px;
 }
 h1{
-  font-family:'Inter',sans-serif;
+  font-family:'Outfit',sans-serif;
   font-size:2.4rem;
   line-height:1.15;
   font-weight:600;
@@ -148,7 +148,7 @@ h1{
   margin-bottom:30px;
 }
 .contact-box h4{
-  font-family:'Inter',sans-serif;
+  font-family:'Outfit',sans-serif;
   font-size:1.05rem;
   color:#3b5bdb;
   font-weight:600;
@@ -240,7 +240,7 @@ h1{
   background:none;
   border:none;
   color:#cfcfcf;
-  font-family:'Inter',sans-serif;
+  font-family:'Outfit',sans-serif;
   font-size:.92rem;
   letter-spacing:.5px;
   padding:18px 20px;
@@ -266,7 +266,7 @@ h1{
 }
 
 h2{
-  font-family:'Inter',sans-serif;
+  font-family:'Outfit',sans-serif;
   font-size:1.9rem;
   font-weight:600;
   color:#ffffff;
@@ -292,7 +292,7 @@ p{
   padding:30px 0;
 }
 .research-item h3{
-  font-family:'Inter',sans-serif;
+  font-family:'Outfit',sans-serif;
   font-size:1.3rem;
   color:#ffffff;
   margin-bottom:10px;
@@ -315,7 +315,7 @@ hr{
   padding:24px 0;
 }
 .publication h3{
-  font-family:'Inter',sans-serif;
+  font-family:'Outfit',sans-serif;
   font-size:1.15rem;
   color:#ffffff;
   margin-bottom:8px;
