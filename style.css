@@ -25,7 +25,7 @@ body{
 
 /* ---------- Selection ---------- */
 ::selection{
-  background:#c4a35a;
+  background:#2ec4b6;
   color:#111315;
 }
 
@@ -46,7 +46,7 @@ header{
   width:100%;
   background:rgba(17,19,21,.96);
   backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(196,163,90,.25);
+  border-bottom:1px solid rgba(46,196,182,.25);
   z-index:1000;
 }
 nav{
@@ -57,7 +57,7 @@ nav{
 }
 .logo{
   text-decoration:none;
-  color:#c4a35a;
+  color:#2ec4b6;
   font-family:'Inter',sans-serif;
   font-size:1.5rem;
   font-weight:600;
@@ -79,8 +79,8 @@ nav ul li a{
 }
 nav ul li a:hover,
 nav ul li a.active{
-  color:#c4a35a;
-  border-bottom-color:#c4a35a;
+  color:#2ec4b6;
+  border-bottom-color:#2ec4b6;
 }
 
 /* =====================================================
@@ -105,19 +105,19 @@ nav ul li a.active{
   width:100%;
   max-width:300px;
   border-radius:6px;
-  border:1px solid #c4a35a;
+  border:1px solid #2ec4b6;
   padding:8px;
   background:#181a1c;
   transition:.4s;
 }
 .profile-photo img:hover{
   transform:translateY(-5px);
-  box-shadow:0 0 35px rgba(196,163,90,.15);
+  box-shadow:0 0 35px rgba(46,196,182,.15);
 }
 
 /* ---------- Main info ---------- */
 .small-title{
-  color:#c4a35a;
+  color:#2ec4b6;
   letter-spacing:5px;
   font-size:.78rem;
   text-transform:uppercase;
@@ -131,65 +131,9 @@ h1{
   margin-bottom:14px;
 }
 .tagline{
-  color:#c4a35a;
+  color:#2ec4b6;
   font-size:1.02rem;
   margin-bottom:30px;
-}
-
-/* ---------- Contact info box (like ICREA fitxa) ---------- */
-.contact-box{
-  background:#181a1c;
-  border:1px solid rgba(196,163,90,.3);
-  border-radius:8px;
-  padding:24px 26px;
-  margin-bottom:30px;
-}
-.contact-box h4{
-  font-family:'Inter',sans-serif;
-  font-size:1.05rem;
-  color:#c4a35a;
-  font-weight:600;
-  margin-bottom:16px;
-  letter-spacing:.5px;
-}
-.contact-row{
-  display:flex;
-  align-items:flex-start;
-  gap:12px;
-  margin-bottom:12px;
-  color:#d6d6d6;
-  font-size:.95rem;
-}
-.contact-row:last-child{
-  margin-bottom:0;
-}
-.contact-row i{
-  color:#c4a35a;
-  width:18px;
-  margin-top:3px;
-}
-.contact-row a{
-  color:#f5f5f5;
-  text-decoration:none;
-}
-.contact-row a:hover{
-  color:#c4a35a;
-}
-
-/* ---------- Keywords (like ICREA keyword list) ---------- */
-.keywords{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-bottom:30px;
-}
-.tag{
-  border:1px solid rgba(196,163,90,.45);
-  color:#e6e6e6;
-  padding:7px 16px;
-  border-radius:20px;
-  font-size:.82rem;
-  letter-spacing:.3px;
 }
 
 /* ---------- Social Icons ---------- */
@@ -206,51 +150,15 @@ h1{
   justify-content:center;
   text-decoration:none;
   color:#f5f5f5;
-  border:1px solid rgba(196,163,90,.45);
+  border:1px solid rgba(46,196,182,.45);
   border-radius:50%;
   font-size:19px;
   transition:.3s;
 }
 .social-icons a:hover{
-  background:#c4a35a;
+  background:#2ec4b6;
   color:#111315;
   transform:translateY(-4px);
-}
-
-/* =====================================================
-   Profile sections tab bar (ICREA-style)
-===================================================== */
-.profile-tabs{
-  position:sticky;
-  top:82px;
-  background:rgba(17,19,21,.98);
-  border-top:1px solid rgba(196,163,90,.25);
-  border-bottom:1px solid rgba(196,163,90,.25);
-  z-index:900;
-}
-.profile-tabs .container{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-.tab-btn{
-  background:none;
-  border:none;
-  color:#cfcfcf;
-  font-family:'Inter',sans-serif;
-  font-size:.92rem;
-  letter-spacing:.5px;
-  padding:18px 20px;
-  cursor:pointer;
-  border-bottom:2px solid transparent;
-  transition:.25s;
-}
-.tab-btn:hover{
-  color:#f5f5f5;
-}
-.tab-btn.active{
-  color:#c4a35a;
-  border-bottom-color:#c4a35a;
 }
 
 /* ---------- Tab content panels ---------- */
@@ -275,7 +183,7 @@ h2::after{
   display:block;
   width:90px;
   height:2px;
-  background:#c4a35a;
+  background:#2ec4b6;
   margin-top:10px;
 }
 p{
@@ -299,7 +207,7 @@ p{
 }
 hr{
   border:none;
-  border-top:1px solid rgba(196,163,90,.25);
+  border-top:1px solid rgba(46,196,182,.25);
 }
 
 /* =====================================================
@@ -328,14 +236,14 @@ hr{
   display:inline-block;
   margin-top:20px;
   padding:14px 34px;
-  border:1px solid #c4a35a;
+  border:1px solid #2ec4b6;
   color:#f5f5f5;
   text-decoration:none;
   letter-spacing:1px;
   transition:.35s;
 }
 .button:hover{
-  background:#c4a35a;
+  background:#2ec4b6;
   color:#111315;
 }
 
@@ -346,7 +254,7 @@ hr{
   margin-bottom:18px;
 }
 #contact a{
-  color:#c4a35a;
+  color:#2ec4b6;
   text-decoration:none;
 }
 #contact a:hover{
@@ -358,7 +266,7 @@ hr{
 ===================================================== */
 footer{
   margin-top:20px;
-  border-top:1px solid rgba(196,163,90,.25);
+  border-top:1px solid rgba(46,196,182,.25);
   padding:45px 0;
   text-align:center;
   color:#888;
@@ -378,7 +286,7 @@ footer{
   border-radius:20px;
 }
 ::-webkit-scrollbar-thumb:hover{
-  background:#c4a35a;
+  background:#2ec4b6;
 }
 
 a{
@@ -395,12 +303,6 @@ a{
   }
   .profile-photo img{
     max-width:260px;
-  }
-  .contact-box{
-    text-align:left;
-  }
-  .keywords{
-    justify-content:center;
   }
   .social-icons{
     justify-content:center;
@@ -424,14 +326,6 @@ a{
   }
   .profile{
     padding-top:190px;
-  }
-  .profile-tabs{
-    top:150px;
-    overflow-x:auto;
-  }
-  .tab-btn{
-    padding:14px 14px;
-    white-space:nowrap;
   }
   h1{
     font-size:1.9rem;
