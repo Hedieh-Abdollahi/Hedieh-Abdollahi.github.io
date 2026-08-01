@@ -25,7 +25,7 @@ body{
 
 /* ---------- Selection ---------- */
 ::selection{
-  background:#b5651d;
+  background:#6e1423;
   color:#111315;
 }
 
@@ -46,7 +46,7 @@ header{
   width:100%;
   background:rgba(17,19,21,.96);
   backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(181,101,29,.25);
+  border-bottom:1px solid rgba(110,20,35,.25);
   z-index:1000;
 }
 nav{
@@ -57,7 +57,7 @@ nav{
 }
 .logo{
   text-decoration:none;
-  color:#b5651d;
+  color:#6e1423;
   font-family:'Inter',sans-serif;
   font-size:1.5rem;
   font-weight:600;
@@ -79,8 +79,8 @@ nav ul li a{
 }
 nav ul li a:hover,
 nav ul li a.active{
-  color:#b5651d;
-  border-bottom-color:#b5651d;
+  color:#6e1423;
+  border-bottom-color:#6e1423;
 }
 
 /* =====================================================
@@ -105,19 +105,19 @@ nav ul li a.active{
   width:100%;
   max-width:300px;
   border-radius:6px;
-  border:1px solid #b5651d;
+  border:1px solid #6e1423;
   padding:8px;
   background:#181a1c;
   transition:.4s;
 }
 .profile-photo img:hover{
   transform:translateY(-5px);
-  box-shadow:0 0 35px rgba(181,101,29,.15);
+  box-shadow:0 0 35px rgba(110,20,35,.15);
 }
 
 /* ---------- Main info ---------- */
 .small-title{
-  color:#b5651d;
+  color:#6e1423;
   letter-spacing:5px;
   font-size:.78rem;
   text-transform:uppercase;
@@ -131,7 +131,7 @@ h1{
   margin-bottom:14px;
 }
 .tagline{
-  color:#b5651d;
+  color:#6e1423;
   font-size:1.02rem;
   margin-bottom:30px;
 }
@@ -139,7 +139,7 @@ h1{
 /* ---------- Contact info box (like ICREA fitxa) ---------- */
 .contact-box{
   background:#181a1c;
-  border:1px solid rgba(181,101,29,.3);
+  border:1px solid rgba(110,20,35,.3);
   border-radius:8px;
   padding:24px 26px;
   margin-bottom:30px;
@@ -147,7 +147,7 @@ h1{
 .contact-box h4{
   font-family:'Inter',sans-serif;
   font-size:1.05rem;
-  color:#b5651d;
+  color:#6e1423;
   font-weight:600;
   margin-bottom:16px;
   letter-spacing:.5px;
@@ -164,7 +164,7 @@ h1{
   margin-bottom:0;
 }
 .contact-row i{
-  color:#b5651d;
+  color:#6e1423;
   width:18px;
   margin-top:3px;
 }
@@ -173,7 +173,7 @@ h1{
   text-decoration:none;
 }
 .contact-row a:hover{
-  color:#b5651d;
+  color:#6e1423;
 }
 
 /* ---------- Keywords (like ICREA keyword list) ---------- */
@@ -184,7 +184,7 @@ h1{
   margin-bottom:30px;
 }
 .tag{
-  border:1px solid rgba(181,101,29,.45);
+  border:1px solid rgba(110,20,35,.45);
   color:#e6e6e6;
   padding:7px 16px;
   border-radius:20px;
@@ -206,13 +206,13 @@ h1{
   justify-content:center;
   text-decoration:none;
   color:#f5f5f5;
-  border:1px solid rgba(181,101,29,.45);
+  border:1px solid rgba(110,20,35,.45);
   border-radius:50%;
   font-size:19px;
   transition:.3s;
 }
 .social-icons a:hover{
-  background:#b5651d;
+  background:#6e1423;
   color:#111315;
   transform:translateY(-4px);
 }
@@ -224,8 +224,8 @@ h1{
   position:sticky;
   top:82px;
   background:rgba(17,19,21,.98);
-  border-top:1px solid rgba(181,101,29,.25);
-  border-bottom:1px solid rgba(181,101,29,.25);
+  border-top:1px solid rgba(110,20,35,.25);
+  border-bottom:1px solid rgba(110,20,35,.25);
   z-index:900;
 }
 .profile-tabs .container{
@@ -249,8 +249,8 @@ h1{
   color:#f5f5f5;
 }
 .tab-btn.active{
-  color:#b5651d;
-  border-bottom-color:#b5651d;
+  color:#6e1423;
+  border-bottom-color:#6e1423;
 }
 
 /* ---------- Tab content panels ---------- */
@@ -275,7 +275,7 @@ h2::after{
   display:block;
   width:90px;
   height:2px;
-  background:#b5651d;
+  background:#6e1423;
   margin-top:10px;
 }
 p{
@@ -299,7 +299,7 @@ p{
 }
 hr{
   border:none;
-  border-top:1px solid rgba(181,101,29,.25);
+  border-top:1px solid rgba(110,20,35,.25);
 }
 
 /* =====================================================
@@ -328,14 +328,14 @@ hr{
   display:inline-block;
   margin-top:20px;
   padding:14px 34px;
-  border:1px solid #b5651d;
+  border:1px solid #6e1423;
   color:#f5f5f5;
   text-decoration:none;
   letter-spacing:1px;
   transition:.35s;
 }
 .button:hover{
-  background:#b5651d;
+  background:#6e1423;
   color:#111315;
 }
 
@@ -346,7 +346,7 @@ hr{
   margin-bottom:18px;
 }
 #contact a{
-  color:#b5651d;
+  color:#6e1423;
   text-decoration:none;
 }
 #contact a:hover{
@@ -358,7 +358,7 @@ hr{
 ===================================================== */
 footer{
   margin-top:20px;
-  border-top:1px solid rgba(181,101,29,.25);
+  border-top:1px solid rgba(110,20,35,.25);
   padding:45px 0;
   text-align:center;
   color:#888;
@@ -378,7 +378,7 @@ footer{
   border-radius:20px;
 }
 ::-webkit-scrollbar-thumb:hover{
-  background:#b5651d;
+  background:#6e1423;
 }
 
 a{
