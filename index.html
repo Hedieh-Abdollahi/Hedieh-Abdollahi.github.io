@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
@@ -50,39 +50,6 @@
           Variable Stars &bull; Stellar Populations &bull; AGB Stars &bull;
           Dust &amp; Mass Loss &bull; Local Group Galaxies
         </p>
-
-        <!-- Contact info box, like ICREA's fitxa -->
-        <div class="contact-box">
-          <h4>Contact info</h4>
-          <div class="contact-row">
-            <i class="fa-solid fa-building-columns"></i>
-            <span><strong>Affiliated Researcher</strong> — Konkoly Observatory (HUN-REN CSFK), Hungary</span>
-          </div>
-          <div class="contact-row">
-            <i class="fa-solid fa-building-columns"></i>
-            <span><strong>Visiting Research Fellow</strong> — Institute for Research in Fundamental Sciences (IPM), Iran</span>
-          </div>
-          <div class="contact-row">
-            <i class="fa-solid fa-envelope"></i>
-            <span><a href="mailto:hedieh.abdollahi@csfk.org">hedieh.abdollahi@csfk.org</a> (work)</span>
-          </div>
-          <div class="contact-row">
-            <i class="fa-regular fa-envelope-open"></i>
-            <span><a href="mailto:abdollahi.hedieh2013@gmail.com">abdollahi.hedieh2013@gmail.com</a> (personal)</span>
-          </div>
-        </div>
-
-        <!-- Keywords, like ICREA's keyword list -->
-        <div class="keywords">
-          <span class="tag">Variable stars</span>
-          <span class="tag">Long-period variables</span>
-          <span class="tag">RR Lyrae stars</span>
-          <span class="tag">AGB stars</span>
-          <span class="tag">Dust &amp; mass loss</span>
-          <span class="tag">Local Group dwarf galaxies</span>
-          <span class="tag">Star formation histories</span>
-          <span class="tag">Time-domain astronomy</span>
-        </div>
 
         <div class="social-icons">
           <a href="mailto:hedieh.abdollahi@csfk.org" title="Work Email"><i class="fa-solid fa-envelope"></i></a>
@@ -267,3 +234,21 @@
       sec.classList.toggle('active', sec.id === tabId);
     });
     document.querySelectorAll('.tab-btn').forEach(function(btn){
+      btn.classList.toggle('active', btn.getAttribute('data-tab') === tabId);
+    });
+    document.querySelectorAll('.tab-link').forEach(function(link){
+      link.classList.toggle('active', link.getAttribute('data-tab') === tabId);
+    });
+    document.getElementById('top').scrollIntoView({behavior:'smooth'});
+  }
+
+  document.querySelectorAll('.tab-btn, .tab-link').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      activateTab(this.getAttribute('data-tab'));
+    });
+  });
+</script>
+
+</body>
+</html>
