@@ -144,7 +144,7 @@ nav ul li a.active{
    Profile card (ICREA-style)
 ===================================================== */
 .profile{
-  padding-top:160px;
+  padding-top:70px;
   padding-bottom:70px;
 }
 .profile-grid{
@@ -255,6 +255,7 @@ h1{
   display:flex;
   flex-wrap:wrap;
   gap:18px;
+  margin-bottom:18px;
 }
 .social-icons a{
   width:46px;
@@ -273,6 +274,13 @@ h1{
   background:linear-gradient(135deg,#2b2559,#5b4b9e,#d97a3f);
   color:#111315;
   transform:translateY(-4px);
+}
+.nav-icons a{
+  border-color:rgba(216,180,120,.6);
+}
+.nav-icons a.active{
+  background:linear-gradient(135deg,#2b2559,#5b4b9e,#d97a3f);
+  color:#111315;
 }
 
 /* =====================================================
