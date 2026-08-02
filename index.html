@@ -28,17 +28,6 @@
       <div class="profile-main">
         <p class="small-title">ASTRONOMER</p>
         <h1>Hedieh Abdollahi</h1>
-        <p class="tagline">
-          Local Group Dwarf Galaxies &bull; AGB Stars &bull; Variable Stars &bull;
-          LPVs &bull; RR Lyrae Stars &bull; Dust &amp; Mass Loss
-        </p>
-
-        <!-- Section navigation, as circular shortcuts (replaces old header nav) -->
-        <div class="social-icons nav-icons">
-          <a href="#" class="tab-link active" data-tab="about" title="About"><i class="fa-solid fa-circle-user"></i></a>
-          <a href="#" class="tab-link" data-tab="publications" title="Publications"><i class="fa-solid fa-book-open"></i></a>
-          <a href="#" class="tab-link" data-tab="contact" title="Contact"><i class="fa-solid fa-address-card"></i></a>
-        </div>
 
         <div class="social-icons">
           <a href="mailto:hedieh.abdollahi@csfk.org" title="Work Email"><i class="fa-solid fa-envelope"></i></a>
@@ -59,7 +48,7 @@
 <!-- ===================== -->
 <!-- About -->
 <!-- ===================== -->
-<section class="tab-content active" id="about">
+<section class="page-section" id="about">
   <div class="container narrow">
     <h2>About</h2>
     <p>
@@ -71,13 +60,19 @@
       nearby galaxies, and to uncover hidden structure &mdash; such as
       binary companions or secondary pulsation modes.
     </p>
+
+    <h3 class="subheading">Research Background</h3>
+    <p>
+      Local Group Dwarf Galaxies &bull; AGB Stars &bull; Variable Stars &bull;
+      LPVs &bull; RR Lyrae Stars &bull; Dust &amp; Mass Loss
+    </p>
   </div>
 </section>
 
 <!-- ===================== -->
 <!-- Publications -->
 <!-- ===================== -->
-<section class="tab-content" id="publications">
+<section class="page-section" id="publications">
   <div class="container narrow">
     <h2>Selected Publications</h2>
     <p class="publication-intro">
@@ -90,7 +85,7 @@
 <!-- ===================== -->
 <!-- Contact -->
 <!-- ===================== -->
-<section class="tab-content" id="contact">
+<section class="page-section" id="contact">
   <div class="container narrow">
     <h2>Contact</h2>
     <p>
@@ -116,27 +111,6 @@
     <p>&copy; 2026 Hedieh Abdollahi</p>
   </div>
 </footer>
-
-<!-- ===================== -->
-<!-- Tab switching script -->
-<!-- ===================== -->
-<script>
-  function activateTab(tabId){
-    document.querySelectorAll('.tab-content').forEach(function(sec){
-      sec.classList.toggle('active', sec.id === tabId);
-    });
-    document.querySelectorAll('.tab-link').forEach(function(link){
-      link.classList.toggle('active', link.getAttribute('data-tab') === tabId);
-    });
-  }
-
-  document.querySelectorAll('.tab-link').forEach(function(el){
-    el.addEventListener('click', function(e){
-      e.preventDefault();
-      activateTab(this.getAttribute('data-tab'));
-    });
-  });
-</script>
 
 </body>
 </html>
