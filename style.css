@@ -319,13 +319,20 @@ h1{
   border-bottom-color:#5b4b9e;
 }
 
-/* ---------- Tab content panels ---------- */
-.tab-content{
-  display:none;
-  padding:70px 0;
+/* ---------- Page sections (continuous, no tabs) ---------- */
+.page-section{
+  padding:60px 0;
+  border-top:1px solid rgba(91,75,158,.2);
 }
-.tab-content.active{
-  display:block;
+.subheading{
+  font-family:'Outfit',sans-serif;
+  font-size:1.1rem;
+  font-weight:600;
+  color:#5b4b9e;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-top:24px;
+  margin-bottom:10px;
 }
 
 h2{
