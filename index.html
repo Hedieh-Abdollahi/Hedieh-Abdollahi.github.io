@@ -13,21 +13,6 @@
 <body>
 
 <!-- ===================== -->
-<!-- Top bar -->
-<!-- ===================== -->
-<header>
-  <div class="container">
-    <nav>
-      <ul>
-        <li><a href="#" class="tab-link active" data-tab="about">About</a></li>
-        <li><a href="#" class="tab-link" data-tab="publications">Publications</a></li>
-        <li><a href="#" class="tab-link" data-tab="contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!-- ===================== -->
 <!-- Profile card (ICREA-style) -->
 <!-- ===================== -->
 <section class="profile" id="top">
@@ -48,6 +33,13 @@
           LPVs &bull; RR Lyrae Stars &bull; Dust &amp; Mass Loss
         </p>
 
+        <!-- Section navigation, as circular shortcuts (replaces old header nav) -->
+        <div class="social-icons nav-icons">
+          <a href="#" class="tab-link active" data-tab="about" title="About"><i class="fa-solid fa-circle-user"></i></a>
+          <a href="#" class="tab-link" data-tab="publications" title="Publications"><i class="fa-solid fa-book-open"></i></a>
+          <a href="#" class="tab-link" data-tab="contact" title="Contact"><i class="fa-solid fa-address-card"></i></a>
+        </div>
+
         <div class="social-icons">
           <a href="mailto:hedieh.abdollahi@csfk.org" title="Work Email"><i class="fa-solid fa-envelope"></i></a>
           <a href="mailto:abdollahi.hedieh2013@gmail.com" title="Personal Email"><i class="fa-regular fa-envelope-open"></i></a>
@@ -55,8 +47,8 @@
           <a href="https://www.researchgate.net/profile/Hedieh-Abdollahi?ev=hdr_xprf" target="_blank" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
           <a href="https://github.com/Hedieh-Abdollahi" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
           <a href="CV_Hedieh_Abdollahi.pdf" target="_blank" title="CV"><i class="fa-solid fa-file-pdf"></i></a>
-          <a href="https://orcid.org/my-orcid?orcid=0000-0002-7823-7169" title="ORCID"><i class="fa-brands fa-orcid"></i></a>
-          <a href="https://ui.adsabs.harvard.edu/public-libraries/9v12nLxdRryO2BGLOnrpag" title="NASA ADS"><i class="fa-solid fa-book"></i></a>
+          <a href="https://orcid.org/0000-0002-7823-7169" target="_blank" title="ORCID"><i class="fa-brands fa-orcid"></i></a>
+          <a href="https://ui.adsabs.harvard.edu/public-libraries/9v12nLxdRryO2BGLOnrpag" target="_blank" title="NASA ADS"><i class="fa-solid fa-book"></i></a>
         </div>
       </div>
 
@@ -82,7 +74,6 @@
   </div>
 </section>
 
-
 <!-- ===================== -->
 <!-- Publications -->
 <!-- ===================== -->
@@ -93,8 +84,8 @@
       A complete publication list is available on my Google
       Scholar and ResearchGate profiles.
     </p>
-
-
+  </div>
+</section>
 
 <!-- ===================== -->
 <!-- Contact -->
@@ -134,16 +125,12 @@
     document.querySelectorAll('.tab-content').forEach(function(sec){
       sec.classList.toggle('active', sec.id === tabId);
     });
-    document.querySelectorAll('.tab-btn').forEach(function(btn){
-      btn.classList.toggle('active', btn.getAttribute('data-tab') === tabId);
-    });
     document.querySelectorAll('.tab-link').forEach(function(link){
       link.classList.toggle('active', link.getAttribute('data-tab') === tabId);
     });
-    document.getElementById('top').scrollIntoView({behavior:'smooth'});
   }
 
-  document.querySelectorAll('.tab-btn, .tab-link').forEach(function(el){
+  document.querySelectorAll('.tab-link').forEach(function(el){
     el.addEventListener('click', function(e){
       e.preventDefault();
       activateTab(this.getAttribute('data-tab'));
