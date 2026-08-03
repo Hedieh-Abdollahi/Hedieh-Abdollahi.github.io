@@ -75,82 +75,26 @@
 </section>
 
 
-<!-- ===================== -->
-<!-- Footer -->
-<!-- ===================== -->
-
 <footer>
 
     <div class="container">
 
-        <div class="footer-content">
+        <div class="moon-footer">
+
+            <span id="moon-phase">🌒</span>
 
             <p>
-                © 2026 Hedieh Abdollahi
-            </p>
-
-            <p class="footer-quote">
-                Exploring stellar evolution, one variable star at a time.
-            </p>
-
-            <p class="footer-date">
-
-                Gregorian Calendar:
-                <span id="gregorian-date"></span>
-
-                &nbsp;|&nbsp;
-
-                Lunar Calendar:
-                <span id="lunar-date"></span>
-
-                &nbsp;|&nbsp;
-
-                Solar Hijri Calendar:
-                <span id="solar-date"></span>
-
+                Current Moon phase
             </p>
 
         </div>
 
+        <p>
+
+            © 2026 Hedieh Abdollahi
+
+        </p>
+
     </div>
 
 </footer>
-
-<script>
-
-function updateDates() {
-
-    const now = new Date();
-
-    document.getElementById("gregorian-date").innerHTML =
-        now.toLocaleDateString("en-GB");
-
-    document.getElementById("lunar-date").innerHTML =
-        new Intl.DateTimeFormat(
-            "en-TN-u-ca-islamic",
-            {
-                year: "numeric",
-                month: "long",
-                day: "numeric"
-            }
-        ).format(now);
-
-    document.getElementById("solar-date").innerHTML =
-        new Intl.DateTimeFormat(
-            "fa-IR-u-ca-persian",
-            {
-                year: "numeric",
-                month: "long",
-                day: "numeric"
-            }
-        ).format(now);
-
-}
-
-updateDates();
-
-</script>
-
-</body>
-
-</html>
