@@ -544,3 +544,41 @@ a{
     transform:translateY(0);
   }
 }
+
+footer {
+
+    margin-top: 100px;
+
+    padding: 40px 0;
+
+    border-top: 1px solid rgba(196, 163, 90, 0.3);
+
+    text-align: center;
+
+}
+
+.footer-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+.footer-quote {
+
+    color: #c4a35a;
+
+    font-style: italic;
+
+}
+
+.footer-date {
+
+    color: #aaaaaa;
+
+    font-size: 0.9rem;
+
+}
