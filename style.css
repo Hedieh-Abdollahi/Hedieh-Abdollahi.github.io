@@ -158,7 +158,7 @@ nav ul li a.active{
   width:100%;
   max-width:300px;
   border-radius:6px;
-  border:1px solid #5b4b9e;
+  border:1px solid #d4af37;
   padding:8px;
   background:#181a1c;
   transition:.4s;
@@ -170,7 +170,7 @@ nav ul li a.active{
 
 /* ---------- Main info ---------- */
 .small-title{
-  color:#5b4b9e;
+  color:#d4af37;
   letter-spacing:5px;
   font-size:.78rem;
   text-transform:uppercase;
@@ -324,7 +324,7 @@ h1{
   font-family:'Outfit',sans-serif;
   font-size:1.1rem;
   font-weight:600;
-  color:#5b4b9e;
+  color:#d4af37;
   text-transform:uppercase;
   letter-spacing:1px;
   margin-top:24px;
