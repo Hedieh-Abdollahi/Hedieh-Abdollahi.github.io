@@ -30,17 +30,19 @@ body{
 }
 
 
-/* ---------- Hero photo banner ---------- */
+/* ---------- Hero photo (full image, no cropping) ---------- */
 .hero-photo{
   width:100%;
-  height:500px;
-  background:
-    linear-gradient(180deg, rgba(11,13,16,0.15), rgba(11,13,16,0.55)),
-    url('background.jpg');
-  background-size:cover;
-  background-position:center 15%;
-  background-repeat:no-repeat;
+  text-align:center;
+  background:#0b0d10;
   border-bottom:1px solid rgba(91,75,158,.4);
+}
+.hero-photo img{
+  width:100%;
+  max-width:600px;
+  height:auto;
+  display:block;
+  margin:0 auto;
 }
 
 /* ---------- Container ---------- */
