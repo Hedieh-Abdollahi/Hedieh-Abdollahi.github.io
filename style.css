@@ -98,10 +98,7 @@ nav ul li a.active{
   height:300px;
   object-fit:cover;
   border-radius:50%;
-  border:3px solid transparent;
-  background:
-    linear-gradient(#181a1c,#181a1c) padding-box,
-    linear-gradient(135deg,#1e3a8a,#3b82f6,#60a5fa) border-box;
+  border:3px solid rgba(255,255,255,0.35);
   padding:8px;
   transition:.4s;
 }
