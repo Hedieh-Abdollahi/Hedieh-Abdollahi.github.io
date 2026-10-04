@@ -88,6 +88,24 @@ nav ul li a.active{
   align-items:start;
 }
 
+/* ---------- Night-sky background (upper part, above the line) ---------- */
+header,
+.profile{
+  background:
+    radial-gradient(circle at 40px 60px,#fff 0,#fff 1px,transparent 1.7px),
+    radial-gradient(circle at 160px 20px,#fff 0,#fff 1.2px,transparent 1.9px),
+    radial-gradient(circle at 250px 110px,#fff 0,#fff 0.8px,transparent 1.5px),
+    radial-gradient(circle at 90px 170px,#fff 0,#fff 1.4px,transparent 2.0999999999999996px),
+    radial-gradient(circle at 210px 230px,#fff 0,#fff 1px,transparent 1.7px),
+    radial-gradient(circle at 300px 280px,#fff 0,#fff 0.8px,transparent 1.5px),
+    radial-gradient(circle at 120px 90px,#cfe0ff 0,#cfe0ff 1.6px,transparent 2.3px),
+    radial-gradient(circle at 380px 200px,#fff 0,#fff 1.2px,transparent 1.9px),
+    radial-gradient(circle at 220px 400px,#ffe9c4 0,#ffe9c4 1.8px,transparent 2.5px),
+    radial-gradient(circle at 430px 40px,#fff 0,#fff 1px,transparent 1.7px),
+    #070a18;
+  background-size:320px 320px, 320px 320px, 320px 320px, 320px 320px, 320px 320px, 320px 320px, 470px 470px, 470px 470px, 470px 470px, 470px 470px;
+}
+
 /* ---------- Photo ---------- */
 .profile-photo{
   text-align:center;
